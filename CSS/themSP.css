@@ -1,0 +1,131 @@
+           p{
+        font-family:Tahoma, Geneva, sans-serif;
+        font-size:18px;
+        text-align:center;
+        text-transform:uppercase;}
+        .header{
+            background-image: url(../anh/tkw.jpg);
+            width: 1500px;
+            height: 350px;
+            align-items: center;
+            margin-left: 10px;
+        }
+        #menu{
+            height: 300px;
+            overflow: auto;
+            margin: auto;
+            font-family:"Times New Roman", Times, serif;
+            font-size: 15px;
+            color: #333;
+        }
+        #menu ul {
+            /*background: #FFB90F;*/
+            background-color: #FFB6C1;
+            list-style-type: none;
+            text-align:center;
+            margin: 0;
+            padding: 0;
+        }
+        #menu li {
+            width: 170px;
+            height: 50px;
+
+        }
+        #menu ul li {
+
+            text-decoration: none;
+            /*color: #ad0e0e;*/
+            color: #0000CC;
+            font-weight: bold;
+            display: inline-table;
+            width: 150px;
+            height:40px;
+            line-height:40px;
+            position: relative;
+        }
+        #menu ul li a{
+           /*color: #ad0e0e;*/
+           color: #0000CC;
+            text-decoration: none;
+            display: block;
+        }
+        #menu> ul li a{
+            display: block;
+            padding: 0 10px;
+        }
+        #menu ul li a:hover {
+            background: #ad0e0e;
+            color:#333;
+        }
+        #menu ul li >.sub-menu{
+            display: none;
+            position: absolute;
+            text-align: justify;
+        }
+        #menu ul li:hover .sub-menu {
+            display: block;
+        }
+        #search-box{
+            width:300px;
+            height:40px;
+            line-height: 40px;
+            background: #fff;
+            border-radius: 30px;
+        }
+        #search-text{
+            width:60px;
+            height:40px;
+            line-height: 40px;
+            background-color: #fff;
+            border-radius: 30px;
+
+        }
+        #search-box #search-text{
+            width:200px;
+            line-height: 40px;
+            border:none;
+            outline:none;
+            background: none;
+            font-size: 16px;
+        }
+        #search-box #search-btn{
+            background-color: #fff;
+            cursor: pointer;
+            border:none;
+            border-radius: 50%;
+            width: 50px;
+            height: 40px;
+            line-height: 30px;
+            align-items: center;
+            margin-left: 40px;
+            margin:auto;
+        }
+        #menubanh{
+            background-image:url(./anh/anh-nen-trang-den-cute.webp);
+            }
+        .container{
+            height: 1100px;
+            width:800px;
+        }
+        .add{
+            text-align: center;
+            margin: 10px;
+        }
+        .form{
+            width: 180px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            border-color: #CCC;
+        }
+        .button{
+            border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 2px 2px;
+          background-color: #008CBA;
+        }

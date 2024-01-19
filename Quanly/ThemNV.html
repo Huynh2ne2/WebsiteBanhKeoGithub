@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ThemNV</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="../CSS/ThemNV.css">
+<body>
+	<form class="cover" method="get" name="Form" onsubmit="return validateForm()">
+		<img class="anhdaidien" src="../anh/anhdaidien.jpg" alt=""/>
+		<table class="themNV"  >
+			<tr>
+				<td colspan="2"><h2 style="margin-left: 120px;"> Thêm nhân viên</h2></td>
+			</tr>
+			<tr>
+				<td>ID:</td>
+				<td>
+					<input type="number" size="50" name="uid" required>
+					<div class="error" id="uidErr"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Họ và Tên:</td>
+				<td>
+					<input type="text" size="50" name="name" required>
+					<div class="error" id="nameErr"></div>
+				</td> 
+			</tr>
+			<tr>
+				<td>Giới tính</td>
+				<td>
+					<div id="gt">
+						<input type="radio" name="gt" value="Nam"><label >Nam</label>
+						<input type="radio" name="gt" value="Nu"><label >Nữ</label>
+					</div>	
+					<div class="error" id="gtErr"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Ngày sinh:</td>
+				<td>
+					<input type="date" size="50" name="date" required>
+				</td>
+			</tr>
+			<tr>
+				<td>SĐT:</td>
+				<td>
+					<input type="tel" size="50" maxlength="10" name="phone" required>
+					<div class="error" id="phoneErr"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td>
+					<input type="email" size="50" name="email" required>
+					<div class="error" id="emailErr"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Bộ Phận:</td>
+				<td>
+					<select id="bp" name="bp" required>
+						<option>Select</option>
+						<option value="quanly">Quản lý</option>
+						<option value="giamsat">Giám sát</option>	
+						<option value="kythuat">Kỹ thuật</option>
+						<option value="quanbasp">Quảng bá sản phẩm</option>
+						<option value="chamsockh">Chăm sóc khách hàng</option>
+						<option value="thuchi">Thu chi</option>
+						
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Chức vụ:</td>
+				<td>
+					<select id="cv" name="cv" required>
+						<option>Select</option>
+						<option value="thungan">Thu ngân</option>
+						<option value="nhanvientuvansp">Nhân viên tư vấn sản phầm</option>		
+						<option value="nhanviengiamsat">Nhân viên giám sát</option>
+					</select>
+				</td>
+			</tr>
+	  </table>
+	  <center >
+		<input type="submit" value="HOÀN THÀNH" >
+	</center>
+	</form>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="../js/AddNV_Form_Validation.js"></script>
+
+</body>
+</html>

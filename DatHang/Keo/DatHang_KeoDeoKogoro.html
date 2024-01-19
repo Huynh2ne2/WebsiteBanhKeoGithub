@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DatHang_KeoDeoKogoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../../CSS/Style_DatHang.css" />
+</head>
+<body>
+    <form  name="Form" onsubmit="return validateForm()">
+        <h3><b>Chọn địa chỉ nhận hàng</b></h3>
+        <table cellpadding="5px" cellspacing="5px" width="100%" >
+            <tr style="border: 1px solid black" align="center">
+                <td style="border: 1px solid black">
+                    <i class="fa-solid fa-truck" style="color: #ee482b;"></i>
+                    <label for="nhanhangtainha" >NHẬN HÀNG TẠI NHÀ</label>
+                    <input type="radio" id="receive" name="receive"  value="nhanhangtainha" required>
+                   </td>
+                <td style="border: 1px solid black" align="center">
+                    <label for="nhanhangtainha" >NHẬN HÀNG TẠI TRUNG TÂM</label>
+                    <input type="radio" id="receive" name="receive"  value="nhanhangtaitrungtam" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Họ và tên <sup><font color="#FF0000">(*)</font></sup></legend>
+                        <input type="text" maxlength="20" style="width: 100%; height: 100%;" name="name" id="name" required>
+                        <div class="error" id="nameErr"></div>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Số điện thoại<sup><font color="#FF0000">(*)</font></sup></legend>
+                        <input type="number" style="width: 100%; height: 100%;" name="phone" id="phone" required>
+                        <div class="error" id="phoneErr"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Email<sup><font color="#FF0000">(*)</font></sup></legend>
+                        <input type="text" style="width: 100%; height: 100%;" name="email" id="email" required>
+                        <div class="error" id="emailErr"></div>
+                    </fieldset>
+                </td>
+               <td>
+                <fieldset>
+                    <legend>Tỉnh/Thành Phố<sup><font color="#FF0000">(*)</font></sup></legend>
+                    <select name="tp" id="tp" required>
+                        <option value="">Chọn tỉnh Thành phố của bạn</option>
+                        <option value="1">Tỉnh An Giang</option>
+						<option value="2">Tỉnh Bắc Giang</option>
+						<option value="3">Tỉnh Bến Tre</option>
+						<option value="4">Tỉnh Bình Phước</option>
+						<option value="5">Tỉnh Cà Mau</option>
+						<option value="6">Tỉnh Đồng Nai</option>
+                        <option value="7">Tỉnh Kiên Giang</option>
+						<option value="8">Tỉnh Long An</option>
+						<option value="9">Tỉnh Tiền Giang</option>
+						<option value="10">Tỉnh Tây Ninh</option>
+						<option value="11">TP HCM</option>
+						<option value="12">Hà Nội</option>
+                    </select>
+                </fieldset>
+               </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Quận/Huyện<sup><font color="#FF0000">(*)</font></sup></legend>
+                        <label for="quan"></label>
+                        <select name="quan" id="quan" required>
+                            <option value="">Chọn quận huyện của bạn</option>
+                            <option value="1">Quận 1</option>
+                            <option value="2">Quận 2</option>
+                            <option value="3">Quận 3</option>
+                            <option value="4">Quận 4</option>
+                            <option value="5">Quận 5</option>
+                            <option value="6">Quận 6</option>
+                            <option value="7">Quận Tân Phú</option>
+                            <option value="8">Quận Tân Bình</option>
+                            <option value="9">Quận Gò Vấp</option>
+                            <option value="10">Huyện Bình Chánh</option>
+                            <option value="11">Huyện Bến Lức</option>
+                            <option value="12">Huyện Cần Giờ</option>
+                        </select>
+                    </fieldset>    
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Phường/Xã<sup><font color="#FF0000">(*)</font></sup></legend>
+                        <label for="phuong"></label>
+                        <select name="phuong" id="phuong" required>
+                            <option value="">Chọn phường/xã của bạn</option>
+                            <option value="1">Phường Bến Thành</option>
+                            <option value="2">Phường An Phú</option>
+                            <option value="3">Phường Võ Thị Sáu</option>
+                            <option value="4">Phường 16</option>
+                            <option value="5">Phường 14</option>
+                            <option value="6">Phường 1</option>
+                            <option value="7">Phường Tân Quý</option>
+                            <option value="8">Phường 5</option>
+                            <option value="9">Phường 7</option>
+                            <option value="10">xã Tân Kiên</option>
+                            <option value="11">xã Phước Lợi</option>
+                            <option value="12">xã Hiệp Phước</option>
+                        </select>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Số nhà/Tên đường <sup><font color="#FF0000">(*)</font></sup></legend>
+                        <input type="text" style="width: 100%; height: 100%;" name="address" id="address" required>
+                        <div class="error" id="addressErr"></div>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="tk" name="tk" value="tk" required>
+                    <label for="tk"> Sử dụng thông tin này để đăng ký tài khoản mua hàng 1</label>
+                    <div class="error" id="tkErr"></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Để lại lời nhắn cho Shop nhé<sup><font color="#FF0000">(*)</font></sup></legend>
+                        <textarea name="message" rows="10" cols="90" style="width: 100%;"></textarea>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <h3><b>Chọn phương thức thanh toán</b></h3>
+        <table cellpadding="5px" cellspacing="5px" width="100%" >
+            <tr>
+                <td><b>Sản phẩm bạn mua</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://cf.shopee.vn/file/ef81f2ae5236d2ea7d4c262383b6cb26" width="150px" height="130px"/>
+                </td>
+                <td>
+                    Đơn giá: 50.000đ &ensp;&ensp;
+                    <div id="buy-amount">
+                        <button class="minus-btn" onclick="handleMinus()"><i class="fa-solid fa-minus"></i></button>
+                        <input type="text" name="amount" id="amount" value="1">
+                        <button class="plus-btn" onclick="handlePlus()"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </td>
+                <td>
+                    Thành Tiền<br>
+                    <select style="margin-left: 10px; width: 60%; height: 100%;">
+                        <option value="1">Sl1: 50.000đ</option>
+                        <option value="2">Sl2: 100.000đ</option>
+                        <option value="3">Sl3: 150.000đ</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="border: 1px solid black" align="center">
+                <td style="border: 1px solid black" align="center">
+                    <label for="thanhtoankhinhanhang" >Thanh toán khi nhận hàng</label>
+                    <input type="radio" id="thanhtoan"  name="thanhtoan"  value="nhanhangtainha" required>
+                </td>
+                <td style="border: 1px solid black" align="center">
+                    <label for="theatm" >Thẻ ATM/Internet banking</label>
+                    <input type="radio" id="thanhtoan"  name="thanhtoan" value="nhanhangtainha" required>
+                   </td>
+                <td style="border: 1px solid black" align="center">
+                    <label for="thetindung" >Thẻ tín dụng</label>
+                    <input type="radio" id="thanhtoan"  name="thanhtoan"  value="nhanhangtaitrungtam" required>
+                </td>
+                <div class="error" id="thanhtoanErr"></div>
+            </tr>
+            <br>
+            <tr>
+                <td colspan="3" style="border: 1px solid black" >
+                    <input type="checkbox"  id="dichvulapdat" name="yeucau"  value="dichvulapdat" >
+                    <label for="dichvulapdat" >Bạn muốn sử dụng dịch vụ ưu đãi từ shop</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="border: 1px solid black" >
+                    <input type="checkbox" id="chinhsach" name="yeucau"  value="chinhsach" >
+                    <label for="chinhsach" >Tôi đồng ý <a href="#" target="_blank" tabindex="1" title="Shop">thỏa thuận bảo mặt và chính sách mua hàng</a></label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="border: 1px solid black" >
+                    <input type="checkbox" id="xuathoadon" name="yeucau"  value="xuathoadon" >
+                    <label for="xuathoadon" >Yêu cầu xuất hóa đơn GTGT cho đơn hàng này</label>
+                </td>
+            </tr>
+        </table>
+        <center >
+            <input type="submit" value="THANH TOÁN" style=" border-color: #FF0000; background-color: #FF0000;width: 100%;height: 100%; color: #FFFFFF;" >
+        </center>
+    </form>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!--Ràng buộc dữ liệu cho form đặt hàng-->
+    <script src="../../js/Order_Form_Validation.js"></script>
+    <!--Tăng /giảm sản phẩm-->
+    <script src="../../js/TangGiam_SP.js"></script>
+</body>
+</html>

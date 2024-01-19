@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menu</title>
+<link rel="stylesheet" type="text/css" href="../CSS/SP.css" />
+</head>
+
+<body>
+<div class="header"></div>
+    <div id="menu">
+        <ul>
+            <li><a href="../giaodien.html">Trang chủ</a></li>
+            <li>
+              <a href="#">Sản phẩm</a>
+              <ul class="sub-menu">
+                  <li><a href="thongtinsp/BanhBongLan.html">Bánh bông lan</a></li>
+                  <li><a href="thongtinsp/BanhNgot.html">Bánh ngọt</a></li>
+                  <li><a href="thongtinsp/Keo.html">Kẹo</a></li>
+                  <li><a href="thongtinsp/BanhQuy.html">Bánh quy</a></li>
+                  <li><a href="thongtinsp/MutTraiCay.html">Mứt trái cây</a></li>
+              </ul>
+            </li>
+            <li><a href="Register.html">Đăng ký</a></li>
+            <li><a href="Login.html">Đăng nhập</a></li>
+            <li>
+                <a href="#">Quản lý sản phẩm</a>
+                <ul class="sub-menu">
+                    <li><a href="../Quanly/ThemSP.html">Thêm sản phẩm</a></li>
+                    <li><a href="../Quanly/XoaSP.html">Xóa sản phẩm</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Quản lý nhân viên</a>
+                <ul class="sub-menu">
+                    <li><a href="../Quanly/ThemNV.html">Thêm nhân viên</a></li>
+                </ul>
+            </li>
+            <li> 
+                <form id="search-box">
+                    <input type="text" id="search-text" placeholder="Tìm kiếm sản phẩm...">
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+<div class="wrapper">
+    <div class="product-img">
+      <img src="https://file.hstatic.net/1000172139/file/keo_bonbon3_79b178b34aaf470aa8a7715865cf1897_grande.jpg" height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>Kẹo cứng Cavendish & Harvey</h1>
+        <p>Kẹo cứng là thực phẩm có vị ngọt, the cay, chua,... hương thơm đa dạng, có độ giòn cứng đặc trưng. Hình dáng viên kẹo cứng thường là dạng viên và nhiều hình dáng khác. Các loại kẹo cứng thường được làm bằng siro, đường, kết hợp với các hương trái cây, bạc hà hay sữa chua… được đun nóng trong nhiệt độ cao để tạo hình cho kẹo. </p>
+      </div>
+      <div class="buttons_added">
+  <input class="minus is-form" type="button" value="-">
+  <input aria-label="quantity" class="input-qty" max="99" min="1" name="type" type="number" value="1">
+  <input class="plus is-form" type="button" value="+">
+</div>
+      <div class="product-price-btn">
+        <p><span>90,000</span>VNĐ</p>
+        <a href="../DatHang/Keo/DatHang_KeoCungHarvey.html">
+          <button type="button">buy now</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="ttsp">
+  <p>Thông tin sản phẩm</p>
+  <a style="color:#999">Kẹo cứng với nhiều hương vị trái cây thơm ngon, hấp dẫn kích thích vị giác. Kẹo vị trái cây nhiệt đới Cavendish & Harvey hộp hương vị thơm ngon, hợp khẩu vị mọi lứa tuổi. Kẹo cứng Cavendish & Harvey có nguồn gốc từ Đức, được đóng hộp sang trọng, tinh tế.<br /><br /> </a>
+  	<table cellpadding="0" cellspacing="0">
+    	<tr>
+        	<td width="88">Loại kẹo</td>
+            <td width="510">Kẹo vị trái cây nhiệt đới</td>
+		</tr>
+        <tr>
+        	<td>Bảo quản</td>
+            <td>Nhiệt độ thường hoặc ngăn mát tủ lạnh</td>
+		</tr>
+        <tr>
+        	<td>Khối lượng</td>
+            <td>200g</td>
+		</tr>
+        <tr>
+        	<td>Thành phần</td>
+            <td>Si-rô glucose, đường, axit citric (E330), nước ép trái cây cô đặc 1% (dứa, xoài, chanh dây, quýt, bưởi), màu tự nhiên được chiết xuất từ cà rốt vàng, củ cải đường, hương liệu tự nhiên.</td>
+		</tr>
+        <tr>
+        	<td>Thương hiệu</td>
+        	<td>Cavendish & Harvey (Đức)</td>
+		</tr>
+        <tr>
+        	<td>Sản xuất</td>
+            <td>Đức</td>
+		</tr>
+	</table>
+
+  </div>
+  <script>//<![CDATA[
+	$('input.input-qty').each(function() {
+	  var $this = $(this),
+		qty = $this.parent().find('.is-form'),
+		min = Number($this.attr('min')),
+		max = Number($this.attr('max'))
+	  if (min == 0) {
+		var d = 0
+	  } else d = min
+	  $(qty).on('click', function() {
+		if ($(this).hasClass('minus')) {
+		  if (d > min) d += -1
+		} else if ($(this).hasClass('plus')) {
+		  var x = Number($this.val()) + 1
+		  if (x <= max) d += 1
+		}
+		$this.attr('value', d).val(d)
+	  })
+	})
+//]]></script>
+</body>
+</html>

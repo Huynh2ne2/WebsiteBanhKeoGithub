@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Menu</title>
+<link rel="stylesheet" type="text/css" href="../CSS/SP.css" />
+</head>
+
+<body>
+<div class="header"></div>
+    <div id="menu">
+        <ul>
+            <li><a href="../giaodien.html">Trang chủ</a></li>
+            <li>
+              <a href="#">Sản phẩm</a>
+              <ul class="sub-menu">
+                  <li><a href="thongtinsp/BanhBongLan.html">Bánh bông lan</a></li>
+                  <li><a href="thongtinsp/BanhNgot.html">Bánh ngọt</a></li>
+                  <li><a href="thongtinsp/Keo.html">Kẹo</a></li>
+                  <li><a href="thongtinsp/BanhQuy.html">Bánh quy</a></li>
+                  <li><a href="thongtinsp/MutTraiCay.html">Mứt trái cây</a></li>
+              </ul>
+            </li>
+            <li><a href="Register.html">Đăng ký</a></li>
+            <li><a href="Login.html">Đăng nhập</a></li>
+            <li>
+                <a href="#">Quản lý sản phẩm</a>
+                <ul class="sub-menu">
+                    <li><a href="../Quanly/ThemSP.html">Thêm sản phẩm</a></li>
+                    <li><a href="../Quanly/XoaSP.html">Xóa sản phẩm</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Quản lý nhân viên</a>
+                <ul class="sub-menu">
+                    <li><a href="../Quanly/ThemNV.html">Thêm nhân viên</a></li>
+                </ul>
+            </li>
+            <li> 
+                <form id="search-box">
+                    <input type="text" id="search-text" placeholder="Tìm kiếm sản phẩm...">
+                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </li>
+        </ul>
+    </div>
+<div class="wrapper">
+    <div class="product-img">
+      <img src="https://cdn.chanhtuoi.com/uploads/2018/01/cach-lam-mit-say-02.jpg.webp" height="420" width="327">
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>Mít sấy </h1>
+        <p>mít sấy hay trái cây sấy khô là loại quả được sấy, phơi khô nhằm rút cạn kiệt bỏ lượng nước bên trong quả. Trải qua các phương pháp sấy nhằm bảo quản trái cây được lâu hơn, sử dụng được trong thời gian dài. Tuy vậy, các sản phẩm trái cây sấy vẫn giữ được hương vị và những chất dinh dưỡng thiết yếu bên trong quả, hương vị không những không đổi mà còn thơm và lạ miệng hơn.  </p>
+      </div>
+      <div class="buttons_added">
+  <input class="minus is-form" type="button" value="-">
+  <input aria-label="quantity" class="input-qty" max="99" min="1" name="type" type="number" value="1">
+  <input class="plus is-form" type="button" value="+">
+</div>
+      <div class="product-price-btn">
+        <p><span>40,000</span>VNĐ</p>
+        <a href="../DatHang/MutTraiCay/DatHang_MitSay.html">
+          <button type="button">buy now</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="ttsp">
+  <p>Thông tin sản phẩm</p>
+  <a style="color:#999">Mít sấy giòn giòn, thơm và giữ được độ ngọt tự nhiên của trái cây, ăn rất thích. Mít sấy vừa ăn vừa xem phim, đọc sách rất phù hợp hoặc thưởng trà. Trái cây sấy Vinamit chất lượng, vệ sinh và dinh dưỡng, là món ăn tiện lợi và thơm ngon<br /><br /> </a>
+  	<table cellpadding="0" cellspacing="0">
+    	<tr>
+        	<td width="88">Loại sản phẩm</td>
+            <td width="510">Mít sấy</td>
+		</tr>
+        <tr>
+        	<td>Bảo quản</td>
+            <td>Bảo quản nơi khô ráo, thoáng mát. Đậy kín bao bì sau khi sử dụng.</td>
+		</tr>
+        <tr>
+        	<td>Khối lượng</td>
+            <td>250g</td>
+		</tr>
+        <tr>
+        	<td>Thành phần</td>
+            <td>Mít 98%, dầu thực vật, nước</td>
+		</tr>
+        <tr>
+        	<td>Thương hiệu</td>
+        	<td>Vinamit (Việt Nam)</td>
+		</tr>
+        <tr>
+        	<td>Sản xuất</td>
+            <td>Việt Nam</td>
+		</tr>
+	</table>
+
+  </div>
+  <script>//<![CDATA[
+	$('input.input-qty').each(function() {
+	  var $this = $(this),
+		qty = $this.parent().find('.is-form'),
+		min = Number($this.attr('min')),
+		max = Number($this.attr('max'))
+	  if (min == 0) {
+		var d = 0
+	  } else d = min
+	  $(qty).on('click', function() {
+		if ($(this).hasClass('minus')) {
+		  if (d > min) d += -1
+		} else if ($(this).hasClass('plus')) {
+		  var x = Number($this.val()) + 1
+		  if (x <= max) d += 1
+		}
+		$this.attr('value', d).val(d)
+	  })
+	})
+//]]></script>
+</body>
+</html>
